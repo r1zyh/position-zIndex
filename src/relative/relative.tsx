@@ -1,3 +1,10 @@
+import { Header } from "../header";
+
 export function Relative(): JSX.Element {
-  return <h1>Relative</h1>;
+  return (
+    <>
+      <Header />
+      <h1>Relative</h1> 
+    </>
+  );
 }

@@ -1,3 +1,10 @@
+import { Header } from "../header";
+
 export function Fixed(): JSX.Element {
-  return <h1>Fixed</h1>;
+  return (
+    <>
+      <Header />
+      <h1>Fixed</h1>
+    </>
+  );
 }

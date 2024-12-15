@@ -1,3 +1,10 @@
+import { Header } from "../header";
+
 export function Sticky(): JSX.Element {
-  return <h1>Sticky</h1>;
+  return (
+    <>
+      <Header />
+      <h1>Sticky</h1>
+    </>
+  );
 }
