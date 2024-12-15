@@ -30,6 +30,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -105,6 +106,60 @@ h1 {
   border-radius: 5px; 
 }
 
+/*стили страничек*/
+
+.container__page {
+  width: 1920px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container__unique {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.container__unique.relative {
+  background-color: lightblue;
+}
+
+.container__unique.fixed {
+  background-color: lightcoral;
+}
+
+.title.relative {
+  position: relative;
+  top: 10px;
+  left: 25px;
+  color: black;
+}
+
+.title.fixed {
+  position: fixed;
+  top: 150px;
+}
+
+.group {
+  background-color: #8286cf;
+  height: 600px;
+  width: 400px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  color: black;
+}
+
+.container__page.fixed {
+  height: 200vh;
+}
 
 /*стили All Positions*/
 
