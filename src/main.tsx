@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import AllPositions from "./all-positions";
+import { App } from "./app";
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <AllPositions />
+    <App />
   </React.StrictMode>
 );

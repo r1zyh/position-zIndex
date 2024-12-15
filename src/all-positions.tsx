@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { AppRoute } from "./const";
 
 export default function AllPositions() {
   const [elements, setElements] = useState([
-    { id: "first", zIndexed: false },
-    { id: "second", zIndexed: false },
-    { id: "third", zIndexed: false },
-    { id: "fourth", zIndexed: false },
+    { id: "first", zIndexed: false, route: AppRoute.Relative },
+    { id: "second", zIndexed: false, route: AppRoute.Absolute },
+    { id: "third", zIndexed: false, route: AppRoute.Fixed },
+    { id: "fourth", zIndexed: false, route: AppRoute.Sticky },
   ]);
   const handleZIndexChange = (id: string) => {
     setElements((prevElements) =>
@@ -20,15 +22,18 @@ export default function AllPositions() {
       <div className="items">
         <ul className="items__list">
           {elements.map((element) => (
-            <li
-              key={element.id}
-              onClick={() => handleZIndexChange(element.id)}
-              className={`items__list--item ${element.id} ${
-                element.zIndexed ? "zIndexed" : ""
-              }`}
-            >
-              <h2>{element.id}</h2>
-            </li>
+            <Link to={element.route}>
+              {" "}
+              <li
+                key={element.id}
+                onClick={() => handleZIndexChange(element.id)}
+                className={`items__list--item ${element.id} ${
+                  element.zIndexed ? "zIndexed" : ""
+                }`}
+              >
+                <h2>{element.id}</h2>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
