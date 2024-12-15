@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { AppRoute } from "./const";
+import { AppRoute } from "../const";
+import { Header } from "../header";
 
-export default function AllPositions() {
+export function AllPositions() {
   const [elements, setElements] = useState([
     { id: "first", zIndexed: false, route: AppRoute.Relative },
     { id: "second", zIndexed: false, route: AppRoute.Absolute },
@@ -18,12 +19,12 @@ export default function AllPositions() {
   };
 
   return (
-    <div className="container">
-      <div className="items">
-        <ul className="items__list">
-          {elements.map((element) => (
-            <Link to={element.route}>
-              {" "}
+    <>
+      <Header />
+      <div className="container">
+        <div className="items">
+          <ul className="items__list">
+            {elements.map((element) => (
               <li
                 key={element.id}
                 onClick={() => handleZIndexChange(element.id)}
@@ -31,12 +32,14 @@ export default function AllPositions() {
                   element.zIndexed ? "zIndexed" : ""
                 }`}
               >
-                <h2>{element.id}</h2>
+                <Link to={element.route}>
+                  <h2>{element.id}</h2>
+                </Link>
               </li>
-            </Link>
-          ))}
-        </ul>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

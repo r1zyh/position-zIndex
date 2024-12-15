@@ -51,7 +51,62 @@ h1 {
 }
 
 
-/*стили конспекта*/
+
+/*Header*/
+
+.header {
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  display: flex; 
+  align-items: stretch;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.nav__list--item {
+  position: relative;
+  padding: 0 15px; 
+  display: flex;
+  align-items: center;
+}
+
+.nav__list--item::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  height: 100%; 
+  width: 2px;
+  background-color: black;
+}
+
+.nav__list--item:last-child::after {
+  content: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.nav__link:hover {
+  box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  border-radius: 5px; 
+}
+
+
+/*стили All Positions*/
 
 .container {
   width: 1920px;
