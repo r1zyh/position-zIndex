@@ -8,7 +8,7 @@ import { Header } from "../header";
 //   position: sticky;
 //   top: 10px;
 // }
-//У элемента должна быть прокрутка 
+//У элемента должна быть прокрутка
 // .items {
 //   position: relative;
 //   width: 80%;
@@ -17,9 +17,20 @@ import { Header } from "../header";
 
 export function Sticky(): JSX.Element {
   return (
-    <>
+    <div className="container__page sticky">
       <Header />
-      <h1>Sticky</h1>
-    </>
+      <div className="container__unique sticky">
+        <div className="group">
+          <h1 className="title sticky">Sticky</h1>
+          <p className="text">This is some text template</p>
+          <p className="text">This is some text template</p>
+          <p className="text">This is some text template</p>
+          <p className="text">This is some text template</p>
+          <p className="text">This is some text template</p>
+          <p className="text">This is some text template</p>
+          <p className="text">This is some text template</p>
+        </div>
+      </div>
+    </div>
   );
 }

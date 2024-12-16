@@ -130,6 +130,15 @@ h1 {
   background-color: lightcoral;
 }
 
+.container__unique.absolute {
+  background-color: lightgreen;
+  position: relative;
+}
+
+.container__unique.sticky {
+  background-color: lightpink;
+}
+
 .title.relative {
   position: relative;
   top: 10px;
@@ -137,9 +146,21 @@ h1 {
   color: black;
 }
 
+.title.absolute {
+  position: absolute;
+  top: 0;
+  right: 600px;
+}
+
 .title.fixed {
   position: fixed;
   top: 150px;
+}
+
+.title.sticky {
+  position: sticky;
+  top: 100px; 
+  left: 0;
 }
 
 .group {
@@ -158,6 +179,10 @@ h1 {
 }
 
 .container__page.fixed {
+  height: 200vh;
+}
+
+.container__page.sticky {
   height: 200vh;
 }
 
